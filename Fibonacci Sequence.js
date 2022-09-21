@@ -5,7 +5,7 @@ function fibonacciSequence( number ) {
    } else if ( number  === 2 ) {
       stack.push( 0, 1 );
    } else if ( number > 2 ) {
-      stack.push( 0, 1);
+      stack.push( 0, 1 );
       for( var i = 2; i < number; i++ ) {
          stack.push( stack[ i - 2 ] + stack[ i - 1 ] );
       }     
