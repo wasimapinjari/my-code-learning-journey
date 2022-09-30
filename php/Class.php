@@ -5,7 +5,7 @@ class Car {
   public $name = "BMW",
   $price = "$75,000";
 
-  function car(){
+  function car() {
     echo $this->name . " car price is: " . $this->price . "<br>";
   }
 
