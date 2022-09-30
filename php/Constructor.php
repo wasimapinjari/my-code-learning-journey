@@ -4,12 +4,12 @@ class Girlfriend {
 
   public $name, $age;
 
-  function __construct($name = "Hannah", $age = 21){
+  function __construct( $name = "Hannah", $age = 21 ) {
     $this->name = $name;
     $this->age = $age;
   }
 
-  function intro(){
+  function intro() {
     echo "My cute girlfriend's name is " . $this->name . ". She is " . $this->age . " years old.<br>";
   }
 
@@ -18,7 +18,7 @@ class Girlfriend {
 $gf1 = new Girlfriend();
 $gf1->intro(); // Output: My cute girlfriend's name is Hannah. She is 21 years old.
 
-$gf2 = new Girlfriend("Jennie", 22);
+$gf2 = new Girlfriend( "Jennie", 22 );
 $gf2->intro(); // Output: My cute girlfriend's name is Jennie. She is 22 years old.
 
 ?>
