@@ -18,9 +18,7 @@ class Girlfriend {
 $gf1 = new Girlfriend();
 $gf1->intro(); // Output: My cute girlfriend's name is Hannah. She is 21 years old.
 
-$gf2 = new Girlfriend();
-$gf2->name = "Jennie";
-$gf2->age = 22;
+$gf2 = new Girlfriend("Jennie", 22);
 $gf2->intro(); // Output: My cute girlfriend's name is Jennie. She is 22 years old.
 
 ?>
