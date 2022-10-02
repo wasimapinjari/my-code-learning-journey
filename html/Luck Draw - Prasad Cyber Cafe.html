@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucky Draw | Prasad Cyber Cafe</title>
+</head>
+<style>
+  body {
+    text-align: center;
+    padding: auto;
+    color: #252A34;
+  }
+  h1, #result {
+    font-size: 3rem;
+  }
+  h3, h2 {
+    font-size: 2rem;
+  }
+</style>
+<body>
+  <br> <br> <br>
+  <h1>🤩 Lucky Draw | Prasad Cyber Cafe 🎉</h1>
+  <br> 
+  <h3>Total Number of People: </h3>
+  <form>
+    <table align="center">
+    <tr>
+      <td colspan="2"><input type="text" style="width: 200px;"></td>
+    </tr>
+    <tr>
+      <td align="left"><input type="submit" value="Choose" style="width: 100px;"></td>
+      <td align="right"><input type="reset" value="Reset" style="width: 100px;"></td>
+    </tr>
+    </table>
+  </form>
+  <br> <br> 
+  <h2>Winner</h2>
+  <h2 id="result"></h2>
+  <script>
+    document.querySelector("h2").textContent = "";
+    document.querySelectorAll("input")[1].addEventListener("click", function(e) {
+      if(document.querySelectorAll("input")[0].value !== "") {
+      var random = Math.floor((Math.random() * document.querySelectorAll("input")[0].value) + 1);
+      }
+      e.preventDefault();
+        if(isNaN(random)){
+          document.querySelector("h2").textContent = "Please Enter a Number in TextBox!";
+          document.querySelector("#result").textContent = "";
+          document.querySelector("body").style.backgroundColor = "#FF2E63";
+          document.querySelector("body").style.color = "#252A34";
+          document.querySelector("h2").style.color = "#252A34";
+          setTimeout(function(){
+            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("body").style.color = "#252A34";
+            document.querySelector("h2").style.color = "#FF2E63";
+          }, 200);
+        }
+        if(!isNaN(random)){
+          document.querySelector("h2").textContent = "Winner:";
+          document.querySelector("h2").style.color = "black";
+          document.querySelector("#result").textContent = "✨  " + random + "  🎊";
+          document.querySelector("body").style.backgroundColor = "greenyellow";
+          document.querySelector("body").style.color = "purple";
+          setTimeout(function(){
+            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("body").style.color = "#252A34";
+          }, 200);
+        }
+      // console.log(random);
+    });
+    document.querySelectorAll("input")[2].addEventListener("click", function(e) {
+      e.preventDefault();
+      document.querySelector("h2").textContent = "";
+      document.querySelectorAll("input")[0].value = "";
+      document.querySelector("#result").textContent = "";
+      document.querySelector("body").style.backgroundColor = "#E3FDFD";
+      document.querySelector("body").style.color = "#372948";
+      setTimeout(function(){
+        document.querySelector("body").style.backgroundColor = "white";
+        document.querySelector("body").style.color = "#252A34";
+      }, 200);
+    });
+  </script>
+</body>
+</html>
